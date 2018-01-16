@@ -3,13 +3,13 @@
   flex-direction: column;
   margin: 0;
   border: 0;
-  
+
 }
 #container{
   width: 800px;
   height: 400px;
   position: relative;
-  background: white;
+  background: black;
 }
 #ball{
   position: absolute;
@@ -22,12 +22,12 @@
   right: 40px;
   width: 10px;
   height: 100px;
-  background: black;
+  background: white;
 }
 #racketLeft{
   position: absolute;
   left: 40px;
   width: 10px;
   height: 100px;
-  background: black;
+  background: white;
 }
