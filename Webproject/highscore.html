@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/highscore.css">
+</head>
+
+<body>
+
+  <!-- navbar has to be improved, doesn't work correctly in small windows -->
+  <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+    <a class="navbar-brand active" href="index.html"  >
+      <img src="Bilder/logoController.png" height="30" class="d-inline-block align-top" alt="home" >
+      The Arcade <span class="sr-only">(current)</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="game1.html">Mount'Axe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="game2.html">Roll a Ball</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="game3.html">4-Gewinnt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" id="active" href="game4.html">Pong</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="center">
+    <div id="tableDiv">
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Mount'Axe</th>
+            <th>Roll a Ball</th>
+            <th>4 Gewinnt</th>
+            <th>Pong</th>
+            <th>TicTacToe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><img src="images/gold.png" alt="1. Platz"></th>
+            <th> Bester in Mount'Axe</th> <!-- Siegesanzahl / Spieleanzahl -->
+            <th> Bester in Roll a Ball</th> <!-- Spieleanzahl -->
+            <th> Bester in 4 Gewinnt</th> <!-- Siegesanzahl / Spieleanzahl -->
+            <th> Bester in Pong</th> <!-- Siegesanzahl / Spieleanzahl -->
+            <th> Bester in TicTacToe</th> <!-- Siegesanzahl / Spieleanzahl -->
+          </tr>
+          <tr>
+            <th><img src="images/silver.png" alt="1. Platz"></th>
+            <th>2. Bester in Mount'Axe</th> <!-- Siegesanzahl / Spieleanzahl -->
+            <th>2. Bester in Roll a Ball</th> <!-- Spieleanzahl -->
+            <th>2. Bester in 4 Gewinnt</th> <!-- Siegesanzahl / Spieleanzahl -->
+            <th>2. Bester in Pong</th> <!-- Siegesanzahl / Spieleanzahl -->
+            <th>2. Bester in TicTacToe</th> <!-- Siegesanzahl / Spieleanzahl -->
+          </tr>
+          <tr>
+            <th><img src="images/bronze.png" alt="1. Platz"></th>
+            <th>3. Bester in Mount'Axe</th> <!-- Siegesanzahl / Spieleanzahl -->
+            <th>3. Bester in Roll a Ball</th> <!-- Spieleanzahl -->
+            <th>3. Bester in 4 Gewinnt</th> <!-- Siegesanzahl / Spieleanzahl -->
+            <th>3. Bester in Pong</th> <!-- Siegesanzahl / Spieleanzahl -->
+            <th>3. Bester in TicTacToe</th> <!-- Siegesanzahl / Spieleanzahl -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer><a href="impressum.html">Impressum</p></footer>
+</body>
+</html>
