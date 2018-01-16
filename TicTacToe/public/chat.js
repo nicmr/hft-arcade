@@ -240,7 +240,6 @@ able = function () {
         round.style.color = "blue";
       }
       round.innerHTML = '<p><em>Du bist dran</em></p>';
-      console.log("hi");
     }
     else {
       round.innerHTML = '';
@@ -256,6 +255,7 @@ able = function () {
     }
     if(counter == 9){
       feedback.innerHTML = '<div id="newDiv"><input id="new" type="button" value="Neustart" onClick="location.reload();"></div>';
+      round.innerHTML = '<p><em>Das Feld ist voll</em></p>';
     }else{
       counter = 0;
     }
@@ -342,10 +342,10 @@ won = function()
     if ( player == 1 ){
       // Set the right color and text
         feedback.innerHTML = '<div><p><em>Rot hat gewonnen.</em></p></div><br><div id="newDiv"><input id="new" type="button" value="Neustart" onClick="location.reload();"></div>';
-
+        round.innerHTML = '';
     }else{
         feedback.innerHTML = '<div><p><em>Blau hat gewonnen.</em></p></div><br><div id="newDiv"><input id="new" type="button" value="Neustart" onClick="location.reload();"></div>';
-
+        round.innerHTML = '';
     }
     // Disable the Game Buttons
 
