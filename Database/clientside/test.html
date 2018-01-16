@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<header>
+    <meta charset="utf8">
+    <title>test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</header>
+<body>
+<script>
+    $(document).ready(function () {
+        wsconnect();
+    });
+</script>
+
+
+<form id="createAccount" action="#" method="post">
+    <div>
+        <label for="username">Benutzername:</label>
+        <input type="text" name="username" id="username">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+    </div>
+    <p>
+        <input type="submit" value="Send"/>
+    </p>
+</form>
+</body>
