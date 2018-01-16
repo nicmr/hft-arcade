@@ -60,7 +60,7 @@ function nonborder() {
 /*
 To go up and down with keyCode not finished!
 */
-window.onkeyup = function(e) {
+/*window.onkeyup = function(e) {
   var key = e.keyCode ? e.keyCode : e.which;
 
   if (key == 38) {
@@ -69,4 +69,4 @@ window.onkeyup = function(e) {
 
   }
 
-}
+}*/
