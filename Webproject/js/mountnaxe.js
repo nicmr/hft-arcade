@@ -19,6 +19,7 @@ var activeDiv;
 var inactivePlayer;
 var availableFields;
 var mountAndAxeSocket;
+var game = "mountnaxe";
 
 // function wsconnect(){
 //   console.log("MountAndAxe attempts to connect...");
@@ -359,11 +360,17 @@ function checkCastle(childNodes){
     // for (var temp in allUnits){
     //   clearField(temp.childNodes);
     // }
+    if (activePlayer.name  = localstorage.name){
+      won = 1;
+    }
+    else {
+      won = 0;
+    }
     var winMessage = activePlayer.name + " has won!";
     alert(winMessage);
     MountAndAxeSocket = new WebSocket("ws://localhost:8765/local/ws/");
     MountAndAxeSocket.onopen = function (){
-      MountAndAxeSocket.send(JSON.stringify({"spiel" : "mountnaxe" , "winner" : activePlayer.name}));
+      MountAndAxeSocket.send(JSON.stringify({"playerOne" : localstorage.name, "$inc" : (game + "rounds") : 1 , "$inc" : (game + "wins") : won}));
     }
     start();
   }

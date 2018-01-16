@@ -6,7 +6,7 @@
 //     console.log("connection opened (exampleSocket)");
 //   }
 // }
-
+var game = "pong";
 var pongSocket;
 var xTemp;
 var yTemp;
@@ -17,6 +17,7 @@ var racketRightY;
 var posX;
 var posY;
 var id;
+var won;
 var classGame = document.getElementsByClassName("game");
 
 $(document).ready(function(){
@@ -97,10 +98,12 @@ function step(){
   var gameOver = false;
   var winner;
   if(posX > 769){
+    won = 1;
     gameOver = true;
     winner = localstorage.name;//"hannes";
   }
   if(posX < -4){
+    won = 0;
     gameOver = true;
     winner = "Gast";
   }
@@ -108,7 +111,8 @@ function step(){
     clearInterval(id);
     pongSocket = new WebSocket("ws://localhost:8765/local/ws/");
     pongSocket.onopen = function (){
-      pongSocket.send(JSON.stringify({"spiel" : "pong", "winner" : winner }));
+      pongSocket.send(JSON.stringify({"playerOne" : localstorage.name, "$inc" : (game + "rounds") : 1 , "$inc" : (game + "wins") : won}));
+      // ich sende den aktuellen Spieler, dann inc für pongrounds (alle spiele), dann inc für pongwins + (wert von won (1 bei sieg, 0 bei niederlage))
     }
   }
 }
