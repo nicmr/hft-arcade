@@ -50,8 +50,12 @@ class LocalGameHandler(tornado.websocket.WebSocketHandler):
 
         def on_message(self, message):
             jsondict = json.loads(message)
-            output = jsondict['winner']
-            print(output)
+            client = MongoClient()
+            db = client['arcade']
+            collection = db['user']
+            update_scores = collection.update(jsondict['name'], jsondict)
+            update_scores
+            print('success')
 
 class AccountHandler(tornado.websocket.WebSocketHandler):
 
@@ -101,8 +105,7 @@ class LoginHandler(tornado.websocket.WebSocketHandler):
             print(founduser)
             print("success")
             username = founduser['name']
-            self.write_message(
-            )
+            self.write_message(username)
         except SyntaxError:
             print("user & password combination doesnt exist!")
             pass

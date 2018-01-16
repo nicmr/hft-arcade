@@ -9,7 +9,18 @@ function createUser() {
     var newuser_name = document.getElementById("register_username").value;
     var newuser_password = document.getElementById("register_password").value;
     var encoded_newuser_pass = window.btoa(newuser_password);
-    var newuser_json = {"name": newuser_name, "password": encoded_newuser_pass};
+    var newuser_json = {
+        "name": newuser_name,
+        "password": encoded_newuser_pass,
+        "pongrounds": 0,
+        "pongwins": 0,
+        "maawins": 0,
+        "maarounds": 0,
+        "4winswins": 0,
+        "4winsrounds": 0,
+        "ticwins": 0,
+        "ticrounds": 0,
+    };
     newSocket.send(JSON.stringify(newuser_json));
     console.log("user created");
 
@@ -19,18 +30,20 @@ function createUser() {
 function getUser() {
 
 
-        var username = document.getElementById("login_username").value;
-        var password = document.getElementById("login_password").value;
-        var encodedpass = window.btoa(password);
-        var user_json = {"name": username, "password": encodedpass};
-        notherSocket.send(JSON.stringify(user_json));
+    var username = document.getElementById("login_username").value;
+    var password = document.getElementById("login_password").value;
+    var encodedpass = window.btoa(password);
+    var user_json = {
+        "name": username,
+        "password": encodedpass,
+    };
+    notherSocket.send(JSON.stringify(user_json));
 
-        notherSocket.onmessage = function (evt) {
-            loggedInUser = evt.data
-            console.log(loggedInUser)
-            localStorage.user = loggedInUser;
-        }
-
+    notherSocket.onmessage = function (evt) {
+        loggedInUser = evt.data
+        console.log(loggedInUser)
+        localStorage.user = loggedInUser;
+    }
 
 
 }
@@ -38,6 +51,7 @@ function getUser() {
 function loggedUser() {
     document.getElementById("storage").innerHTML = localStorage.user;
 }
+
 // logout funktion.
 function logOut() {
 

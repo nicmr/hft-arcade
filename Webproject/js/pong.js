@@ -100,7 +100,7 @@ function step(){
   if(posX > 769){
     won = 1;
     gameOver = true;
-    winner = localstorage.name;//"hannes";
+    winner = localStorage.user;//"hannes";
   }
   if(posX < -4){
     won = 0;
@@ -111,7 +111,10 @@ function step(){
     clearInterval(id);
     pongSocket = new WebSocket("ws://localhost:8765/local/ws/");
     pongSocket.onopen = function (){
-      pongSocket.send(JSON.stringify({"playerOne" : localstorage.name, "$inc" : (game + "rounds") : 1 , "$inc" : (game + "wins") : won}));
+      var update = JSON.stringify({"name" : localStorage.user}, {"$inc": {"pongrounds": 1, "pongwins": won} });
+      console.log(update);
+
+      pongSocket.send(update);
       // ich sende den aktuellen Spieler, dann inc für pongrounds (alle spiele), dann inc für pongwins + (wert von won (1 bei sieg, 0 bei niederlage))
     }
   }
