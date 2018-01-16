@@ -48,25 +48,25 @@ function step(){
   for (key in keysPressed){
     switch (Number(key)) {
       case 38: { //up
-        if(racketRightY > 4){
+        if(racketRightY > -6){
           racketRightY -= 5;
         }
         break;
       }
       case 40: { //down
-        if (racketRightY < 296) {
+        if (racketRightY < 286) {
           racketRightY += 5;
         }
         break;
       }
       case 87: { //w
-        if (racketLeftY > 4) {
+        if (racketLeftY > -6) {
           racketLeftY -= 5;
         }
         break;
       }
       case 83: { //s
-        if (racketLeftY < 296) {
+        if (racketLeftY < 286) {
           racketLeftY += 5;
         }
         break;
@@ -75,14 +75,14 @@ function step(){
   }
   racketLeft.css("top", racketLeftY + "px");
   racketRight.css("top", racketRightY + "px");
-
-  if(posY > 389 || posY < 0){
+  console.log(posX);
+  if(posY > 379 || posY < -7){
     movementY *= -1;
   }
   if(posX < 51 && posX > 39 && posY > racketLeftY && posY < racketLeftY+100){
     movementX *= -1;
   }
-  if(posX < 761 && posX > 749 && posY > racketRightY && posY < racketRightY+100){
+  if(posX < 731 && posX > 719 && posY > racketRightY && posY < racketRightY+100){
     movementX *= -1;
   }
   if(posX > 789){

@@ -1,4 +1,10 @@
-
+.center{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border: 0;
+  
+}
 #container{
   width: 800px;
   height: 400px;
