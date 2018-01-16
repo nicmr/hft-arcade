@@ -1,0 +1,27 @@
+
+#container{
+  width: 800px;
+  height: 400px;
+  position: relative;
+  background: white;
+}
+#ball{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+}
+#racketRight{
+  position: absolute;
+  right: 40px;
+  width: 10px;
+  height: 100px;
+  background: black;
+}
+#racketLeft{
+  position: absolute;
+  left: 40px;
+  width: 10px;
+  height: 100px;
+  background: black;
+}
