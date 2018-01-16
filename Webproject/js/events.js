@@ -20,14 +20,17 @@ function mouseOverHighscore() {
 function pictures(gameid) {
   switch (gameid) {
     case 'game1':
-      document.getElementById("pics").setAttribute("src", "Bilder/age.jpg");
+      document.getElementById("pics").setAttribute("src", "Bilder/maa.gif");
       break;
     case 'game2':
       document.getElementById("pics").setAttribute("src", "Bilder/rollaball.gif");
       break;
     case 'game3':
-      document.getElementById("pics").setAttribute("src", "Bilder/4gewinnt.png");
+      document.getElementById("pics").setAttribute("src", "Bilder/4wins.gif");
       break;
+      case 'game4':
+        document.getElementById("pics").setAttribute("src", "Bilder/pong-game.gif");
+        break;
     default:
   }
 }
