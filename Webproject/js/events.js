@@ -28,9 +28,15 @@ function pictures(gameid) {
     case 'game3':
       document.getElementById("pics").setAttribute("src", "Bilder/4wins.gif");
       break;
-      case 'game4':
-        document.getElementById("pics").setAttribute("src", "Bilder/pong-game.gif");
-        break;
+    case 'game4':
+      document.getElementById("pics").setAttribute("src", "Bilder/pong-game.gif");
+      break;
+    case 'game5':
+      document.getElementById("pics").setAttribute("src", "Bilder/tictactoe.gif");
+      break;
+    case 'game6':
+      document.getElementById("pics").setAttribute("src", "Bilder/nothing.gif");
+      break;
     default:
   }
 }
