@@ -22,7 +22,7 @@ var mountAndAxeSocket;
 
 // function wsconnect(){
 //   console.log("MountAndAxe attempts to connect...");
-//   exampleSocket = new WebSocket("ws://localhost:8765/maa/ws/");
+//   exampleSocket = new WebSocket("ws://localhost:8765/local/ws/");
 //
 //   exampleSocket.onopen = function(){
 //     console.log("connection opened (exampleSocket)");
@@ -355,17 +355,17 @@ function clearField(childNodes){
 
 function checkCastle(childNodes){
   if(childNodes[1].object.healthpoints <= 0){
-    var allUnits = document.getElementsByClassName(inactivePlayer.name);
+    // var allUnits = document.getElementsByClassName(inactivePlayer.name);
     // for (var temp in allUnits){
     //   clearField(temp.childNodes);
     // }
     var winMessage = activePlayer.name + " has won!";
     alert(winMessage);
-    MountAndAxeSocket = new WebSocket("ws://localhost:8765/maa/ws/");
+    MountAndAxeSocket = new WebSocket("ws://localhost:8765/local/ws/");
     MountAndAxeSocket.onopen = function (){
-      console.log("game is won");
-      MountAndAxeSocket.send(JSON.stringify({"winner" : winMessage}));
+      MountAndAxeSocket.send(JSON.stringify({"spiel" : "mountnaxe" , "winner" : activePlayer.name}));
     }
+    start();
   }
 }
 

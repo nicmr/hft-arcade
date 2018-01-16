@@ -1,4 +1,13 @@
+// function wsconnect(){
+//   console.log("Pong attempts to connect...");
+//   exampleSocket = new WebSocket("ws://localhost:8765/pong/ws/");
+//
+//   exampleSocket.onopen = function(){
+//     console.log("connection opened (exampleSocket)");
+//   }
+// }
 
+var pongSocket;
 var xTemp;
 var yTemp;
 var movementX;
@@ -85,13 +94,22 @@ function step(){
   if(posX < 731 && posX > 719 && posY > racketRightY && posY < racketRightY+100){
     movementX *= -1;
   }
-  if(posX > 789){
-    console.log("Punkt für links");
-    clearInterval(id);
+  var gameOver = false;
+  var winner;
+  if(posX > 769){
+    gameOver = true;
+    winner = localstorage.name;//"hannes";
   }
-  if(posX < 1){
-    console.log("Punkt für rechts");
+  if(posX < -4){
+    gameOver = true;
+    winner = "Gast";
+  }
+  if (gameOver){
     clearInterval(id);
+    pongSocket = new WebSocket("ws://localhost:8765/local/ws/");
+    pongSocket.onopen = function (){
+      pongSocket.send(JSON.stringify({"spiel" : "pong", "winner" : winner }));
+    }
   }
 }
 
@@ -112,7 +130,7 @@ function startGame() {
   $("#endButton").prop('disabled',false);
   $("#ball").css("top",posY + "px");
   $("#ball").css("left",posX + "px");
-  id = setInterval(step, 30);
+  id = setInterval(step, 16);
 
 
   // element.style.top = ;

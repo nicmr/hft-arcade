@@ -39,9 +39,21 @@ class EchoWebSocket(tornado.websocket.WebSocketHandler):
     def on_close(self):
         print("Websocket closed")
 
+class LocalGameHandler(tornado.websocket.WebSocketHandler):
+        def check_origin(self, origin):
+            return True
+
+
+        def open(self):
+            self.write_message("socket openend")
+            print("socket opened")
+
+        def on_message(self, message):
+            jsondict = json.loads(message)
+            output = jsondict['winner']
+            print(output)
+
 class AccountHandler(tornado.websocket.WebSocketHandler):
-
-
 
 
     def check_origin(self, origin):
@@ -115,6 +127,7 @@ class AppClass(tornado.web.Application):
             (r'/ws/', EchoWebSocket),   #maps to localhost:8765/ws/
             (r'/acc/ws/', AccountHandler),
             (r'/login/ws/', LoginHandler),
+            (r'/local/ws/', LocalGameHandler),
         ]
 
         settings = {
