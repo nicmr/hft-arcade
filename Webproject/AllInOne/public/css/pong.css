@@ -5,6 +5,23 @@
   border: 0;
 
 }
+
+.pongcenter {
+  display: flex;
+  width: 70%;
+  height: 80%;
+  border-radius: 20px;
+  background-color: white;
+  background-image: url(../Bilder/mario.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:top;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
 #container{
   width: 800px;
   height: 400px;

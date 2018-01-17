@@ -29,6 +29,7 @@ body {
   height: 80%;
   border-radius: 20px;
   background-color: white;
+  background-image: url(../Bilder/mario.jpg);
   justify-content: center;
   align-items: center;
 }

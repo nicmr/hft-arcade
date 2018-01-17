@@ -28,6 +28,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(./Bilder/mario.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:top;
+
 }
 
 footer a {
@@ -276,6 +281,10 @@ td{
 #playerdiv{
   display: flex;
   justify-content: center;
+}
+
+#TableDiv {
+  background-color: white;
 }
 
 #TableDiv, #chatDiv{
