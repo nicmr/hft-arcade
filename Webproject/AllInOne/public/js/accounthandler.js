@@ -8,13 +8,16 @@ var button_logout = document.getElementById("loggeduserbutton");
 document.getElementById("loggeduserbutton").textContent = localStorage.user;
 
 if (logincounter === 0) {
-    button_logout.style.display = "hide";
-    button_login.style.display = "block";
+  $("#loggeduserbutton").hide();
+  $("#mod").show();
+    // button_logout.style.display = "hide";
+    // button_login.style.display = "block";
 
 } else if (logincounter ===1) {
-
-    button_logout.style.display = "block";
-    button_login.style.display = "none";
+  $("#loggeduserbutton").show();
+  $("#mod").hide();
+    // button_logout.style.display = "block";
+    // button_login.style.display = "none";
 }
 function createUser() {
 
@@ -67,11 +70,8 @@ function getUser() {
 
 // logout funktion.
 function logOut() {
-    logincounter = 0;
+  logincounter = 0;
    localStorage.clear();
    location.reload();
 
 }
-
-
-
