@@ -11,7 +11,6 @@ var socket = io.connect('http://localhost:3000');
 var message = document.getElementById('message');
     handle = document.getElementById('handle'),
     btn = document.getElementById('send'),
-
     btn11 = document.getElementById('Button11'),
     btn21 = document.getElementById('Button21'),
     btn31 = document.getElementById('Button31'),
@@ -21,11 +20,9 @@ var message = document.getElementById('message');
     btn13 = document.getElementById('Button13'),
     btn23 = document.getElementById('Button23'),
     btn33 = document.getElementById('Button33'),
-
     output = document.getElementById('output'),
     feedback = document.getElementById('feedback'),
     round = document.getElementById('Round'),
-
     field = document.getElementById('field'),
     player1 = document.getElementById('player1'),
     player2 = document.getElementById('player2'),
@@ -406,71 +403,3 @@ $(document).ready(function () {
     $("#plop6").hide(),
     $("#plop7").hide()
 })
-    // $("#player1").click(function () {
-    //     $(this).fadeOut(1000);
-    // }),
-    // $("#player2").click(function () {
-    //   $(this).fadeOut(1000);
-    // })
-
-    // $("#Button1").click(function () {
-    //   jump = 47 + plop1var.innerHTML * 75;
-    //   $("#plop1").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    // }),
-    // $("#Button2").click(function () {
-    //   jump = 47 + plop2var.innerHTML * 75;
-    //   $("#plop2").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    //
-    // }),
-    // $("#Button3").click(function () {
-    //   jump = 47 + plop3var.innerHTML * 75;
-    //   $("#plop3").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    //
-    // }),
-    // $("#Button4").click(function () {
-    //   jump = 47 + plop4var.innerHTML * 75;
-    //   $("#plop4").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    //
-    // }),
-    // $("#Button5").click(function () {
-    //   jump = 47 + plop5var.innerHTML * 75;
-    //   $("#plop5").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    //
-    // }),
-    // $("#Button6").click(function () {
-    //   jump = 47 + plop6var.innerHTML * 75;
-    //   $("#plop6").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    //
-    // }),
-    // $("#Button7").click(function () {
-    //   jump = 47 + plop7var.innerHTML * 75;
-    //   $("#plop7").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    // })

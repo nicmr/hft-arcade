@@ -1,11 +1,6 @@
 // Make Connection
-<<<<<<< HEAD
-// var socket = io.connect('http://192.168.0.31:3000');
-var socket = io.connect('http://localhost:3000');
-=======
 //var socket = io.connect('http://192.168.0.31:3000');
  var socket = io.connect('http://localhost:3000');
->>>>>>> d40eae22e92922fa405c97a987bc62bf211baf15
 // var socket = io.connect('http://172.20.10.11:3000');
 // var socket = io.connect('http://192.168.178.39:3000');
 
@@ -572,71 +567,3 @@ $(document).ready(function () {
     $("#plop6").hide(),
     $("#plop7").hide()
 })
-    // $("#player1").click(function () {
-    //     $(this).fadeOut(1000);
-    // }),
-    // $("#player2").click(function () {
-    //   $(this).fadeOut(1000);
-    // })
-
-    // $("#Button1").click(function () {
-    //   jump = 47 + plop1var.innerHTML * 75;
-    //   $("#plop1").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    // }),
-    // $("#Button2").click(function () {
-    //   jump = 47 + plop2var.innerHTML * 75;
-    //   $("#plop2").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    //
-    // }),
-    // $("#Button3").click(function () {
-    //   jump = 47 + plop3var.innerHTML * 75;
-    //   $("#plop3").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    //
-    // }),
-    // $("#Button4").click(function () {
-    //   jump = 47 + plop4var.innerHTML * 75;
-    //   $("#plop4").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    //
-    // }),
-    // $("#Button5").click(function () {
-    //   jump = 47 + plop5var.innerHTML * 75;
-    //   $("#plop5").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    //
-    // }),
-    // $("#Button6").click(function () {
-    //   jump = 47 + plop6var.innerHTML * 75;
-    //   $("#plop6").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    //
-    // }),
-    // $("#Button7").click(function () {
-    //   jump = 47 + plop7var.innerHTML * 75;
-    //   $("#plop7").show().animate({
-    //     paddingTop: "+=" + jump + "px",
-    //   }).fadeOut(10).animate({
-    //     paddingTop: "= 71px",
-    //   });
-    // })
