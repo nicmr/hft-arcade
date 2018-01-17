@@ -68,6 +68,11 @@ footer a {
   color: blue;
 }
 
+nav #activebrand {
+  color: inherit;
+  opacity: 1;
+}
+
 footer a:hover {
   color: red;
 }

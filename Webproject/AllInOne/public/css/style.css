@@ -59,10 +59,12 @@ footer a {
 
 #nav a {
   color: black;
+  opacity: 0.7;
 }
 
 #nav a:hover {
   color: blue;
+  opacity: 1;
 }
 
 footer a:hover {
@@ -79,6 +81,12 @@ footer a:hover {
 
 nav #active {
   color: yellow;
+  opacity: 1;
+}
+
+nav #activebrand {
+  color: inherit;
+  opacity: 1;
 }
 
 .inner-center-home {
