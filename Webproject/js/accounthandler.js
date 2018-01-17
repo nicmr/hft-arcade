@@ -1,8 +1,21 @@
 var newSocket = new WebSocket("ws://localhost:8765/acc/ws/");
 var notherSocket = new WebSocket("ws://localhost:8765/login/ws/");
 var loggedInUser;
+var logincounter;
 
+var button_login = document.getElementById("mod");
+var button_logout = document.getElementById("loggeduserbutton");
+document.getElementById("loggeduserbutton").textContent = localStorage.user;
 
+if (logincounter === 0) {
+    button_logout.style.display = "hide";
+    button_login.style.display = "block";
+
+} else if (logincounter ===1) {
+
+    button_logout.style.display = "block";
+    button_login.style.display = "none";
+}
 function createUser() {
 
 
@@ -43,19 +56,20 @@ function getUser() {
         loggedInUser = evt.data
         console.log(loggedInUser)
         localStorage.user = loggedInUser;
+        logincounter = 1;
+        console.log(logincounter)
     }
 
-
 }
 
-function loggedUser() {
-    document.getElementById("storage").innerHTML = localStorage.user;
-}
+
+
 
 // logout funktion.
 function logOut() {
-
-    localStorage.clear();
+    logincounter = 0;
+   localStorage.clear();
+   location.reload();
 
 }
 
