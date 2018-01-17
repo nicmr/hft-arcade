@@ -12,10 +12,9 @@
   height: 80%;
   border-radius: 20px;
   background-color: white;
-  background-image: url(../Bilder/roehre2.jpg);
-  background-repeat: no-repeat;
+  background-image: url(../Bilder/mario4.jpg);
   background-attachment: fixed;
-  background-position:top;
+  background-position:center;
   flex-flow: column;
   align-items: center;
   justify-content: center;
