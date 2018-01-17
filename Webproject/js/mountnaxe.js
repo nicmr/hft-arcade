@@ -19,7 +19,7 @@ var activeDiv;
 var inactivePlayer;
 var availableFields;
 var mountAndAxeSocket;
-var game = "mountnaxe";
+var game = "maa";
 
 // function wsconnect(){
 //   console.log("MountAndAxe attempts to connect...");
