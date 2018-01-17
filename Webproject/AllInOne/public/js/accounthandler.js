@@ -8,7 +8,7 @@ var button_logout = document.getElementById("loggeduserbutton");
 document.getElementById("loggeduserbutton").textContent = localStorage.user;
 
 if (logincounter === 0) {
-    button_logout.style.display = "hide";
+    button_logout.style.display = "none";
     button_login.style.display = "block";
 
 } else if (logincounter ===1) {
