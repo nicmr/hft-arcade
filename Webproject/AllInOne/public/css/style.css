@@ -32,6 +32,7 @@ body {
   background-image: url(../Bilder/mario4.jpg);
   justify-content: center;
   align-items: center;
+  overflow-x: auto;
 }
 
 footer a {
@@ -52,7 +53,7 @@ footer a {
 }
 
 #nav {
-  background-color: orange;
+  background-color: #FF9933;
   color: black;
 }
 
@@ -96,6 +97,7 @@ nav #active {
   background-position: center center;
   font-family: 'meine-schrift2';#
   min-width: 510px;
+  overflow-x: auto;
 }
 
 .rowpic {

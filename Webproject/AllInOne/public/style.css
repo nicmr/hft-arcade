@@ -30,7 +30,7 @@ body {
   align-items: center;
   background-image: url(./Bilder/mario4.jpg);
   background-position:center;
-
+  overflow-x: auto;
 }
 
 footer a {
