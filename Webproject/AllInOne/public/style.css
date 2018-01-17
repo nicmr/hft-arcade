@@ -291,6 +291,7 @@ td{
 
 #chat-window{
   height: 53%;
+  width: 100%;
   overflow: auto;
   background: #f9f9f9;
 }

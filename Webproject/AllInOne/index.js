@@ -35,4 +35,8 @@ io.on('connection', function(socket) {
     io.sockets.emit('Player', data);
   })
 
+  socket.on('newGame', function (data) {
+    io.sockets.emit('newGame', data);
+  })
+
 })
