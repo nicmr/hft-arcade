@@ -370,7 +370,7 @@ function checkCastle(childNodes){
     alert(winMessage);
     MountAndAxeSocket = new WebSocket("ws://localhost:8765/local/ws/");
     MountAndAxeSocket.onopen = function (){
-      MountAndAxeSocket.send(JSON.stringify({"playerOne" : localstorage.name, "$inc" : (game + "rounds") : 1 , "$inc" : (game + "wins") : won}));
+      MountAndAxeSocket.send(JSON.stringify({"name" : localStorage.name}, {"$inc" : {"maarounds" : 1,  "maawins" : won }}));
     }
     start();
   }
