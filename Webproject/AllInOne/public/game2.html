@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | Roller Ball</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/roll a ball.json", {onProgress: UnityProgress});
+  </script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+    <a class="navbar-brand active" href="index.html">
+      <img src="Bilder/logoController.png" height="30" class="d-inline-block align-top" alt="home" >
+      The Arcade <span class="sr-only">(current)</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="game1.html">Mount'Axe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" id="active" href="game2.html">Roll a Ball</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="index4g.html">4-Gewinnt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="game4.html">Pong</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="indexTTT.html">TicTacToe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="game6.html">KnightRun</a>
+        </li>
+      </ul>
+      <!-- Beginn Startseite -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <div id="storage" onload="loggedUser()"></div>
+          <div class="container">
+            <div class="row">
+              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login-modal" id="mod">
+                    Login
+                </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="center">
+      <div class="webgl-content">
+        <div id="gameContainer" style="width: 960px; height: 600px"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+          <div class="title">Roller Ball</div>
+        </div>
+    </div>
+  </div>
+  <footer><a href="impressum.html">Impressum</p></footer>
+
+</body>
+</html>
