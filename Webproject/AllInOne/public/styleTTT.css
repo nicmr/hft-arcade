@@ -1,17 +1,14 @@
 @font-face {
   font-family: 'meine-schrift';
-  src: url('./font/8-BITWONDER.TTF') format('truetype');
-}
-
-@font-face {
-  font-family: 'meine-schrift2';
-  src: url('./font/Neon.TTF') format('truetype');
+  src: local('8BIT WONDER Nominal Standard'), url('./font/8-BITWONDER.TTF') format('truetype');
 }
 
 body {
   color: black;
   font-family: 'meine-schrift';
 }
+
+
 
 .center {
   display: flex;
@@ -24,11 +21,11 @@ body {
 }
 
 .inner-center {
-  display: flex;
   width: 70%;
   height: 80%;
   border-radius: 20px;
   background-color: white;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -64,11 +61,19 @@ footer a {
 }
 
 footer a:hover {
-  color: blue;
+  color: red;
 }
 
 #impressum {
   font-family: 'Roboto';
+}
+
+.active {
+  color: yellow;
+}
+
+nav #active {
+  color: yellow;
 }
 
 .tttField{
@@ -285,6 +290,7 @@ td{
   box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
   border-radius: 2px;
   position: relative;
+  font-family: 'Nunito';
 }
 
 #mario-chat{
