@@ -2,179 +2,229 @@
 <html lang="de">
 
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+          integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../../css/style2.css">
-  <link rel="stylesheet" href="../../css/style.css">
-  <link rel="stylesheet" href="../../css/stylesheet.css">
-  <script language="javascript" type="text/javascript" src="../../js/events.js"></script>
 
+    <script language="javascript" type="text/javascript" src="js/events.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--  <script src="script.js"></script> -->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <script type="application/javascript"></script>
-  <nav class="navbar navbar-expand-lg navbar-light" id="nav">
-    <a class="navbar-brand active" href="../../index.html">
-      <img src="../../Bilder/logoController.png" height="30" class="d-inline-block align-top" alt="home" >
-      The Arcade <span class="sr-only">(current)</span>
+
+<nav class="navbar navbar-expand-lg navbar-light" id="nav">
+    <a class="navbar-brand active" href="index.html" id="active">
+        <img src="Bilder/logoController.png" height="30" class="d-inline-block align-top" alt="home">
+        The Arcade <span class="sr-only">(current)</span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-item nav-link" href="../../game1.html">Mount'Axe</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link" href="../../game2.html">Roll a Ball</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link" id="active" href="index.html">4-Gewinnt</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link" href="../../game4.html">Pong</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link" href="indexTTT.html">TicTacToe</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link" href="../../game6.html">KnightRun</a>
-        </li>
-      </ul>
-      <!-- Beginn Startseite -->
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <div id="storage" onload="loggedUser()"></div>
-          <div class="container">
-            <div class="row">
-              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login-modal" id="mod">
-                    Login
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="game1.html">Mount'Axe</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="game2.html">Roll a Ball</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="index4g.html">4-Gewinnt</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="game4.html">Pong</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href=indexTTT.html">TicTacToe</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="game6.html">KnightRun</a>
+            </li>
+        </ul>
+        <!-- Beginn Startseite -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <div id="storage" onload="loggedUser()"></div>
+                <div class="container">
+                    <div class="row">
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                                data-target="#login-modal" id="mod">
+                            Login
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg" id="loggeduserbutton" onclick="logOut()">
+                            User
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="center">
+    <div class="inner-center-home">
+        <img src="Bilder/headlineRegenbogen.svg.png" height="200px" alt="header">
+        <div class="rowpic">
+            <div class="buttons">
+                <div class="game" id="game1" onmouseover="mouseOver(this)" onmouseout="mouseOut()">
+                    <a href="game1.html" style="text-decoration:none;" id="game1-name">Mount'Axe</a>
+                </div>
+                <div class="game" id="game2" onmouseover="mouseOver(this)" onmouseout="mouseOut()">
+                    <a href="game2.html" style="text-decoration:none;" id="game2-name">Roll a Ball</a>
+                </div>
+                <div class="game" id="game3" onmouseover="mouseOver(this)" onmouseout="mouseOut()">
+                    <a href="4Gewinnt/public/index.html" style="text-decoration:none;" id="game3-name">4-Gewinnt</a>
+                </div>
+                <div class="game" id="game4" onmouseover="mouseOver(this)" onmouseout="mouseOut()">
+                    <a href="game4.html" style="text-decoration:none;" id="game4-name">Pong</a>
+                </div>
+                <div class="game" id="game5" onmouseover="mouseOver(this)" onmouseout="mouseOut()">
+                    <a href="TicTacToe/public/index.html" style="text-decoration:none;" id="game5-name">TicTacToe</a>
+                </div>
+                <div class="game" id="game6" onmouseover="mouseOver(this)" onmouseout="mouseOut()">
+                    <a href="game6.html" style="text-decoration:none;" id="game6-name">KnightRun</a>
+                </div>
+                <div class="game" id="highscore" onmouseover="mouseOverHighscore(this)" onmouseout="mouseOut()">
+                    <a href="#" style="text-decoration:none;" id="highscore-field">Highscore</a>
+                </div>
+            </div>
+            <div class="pics">
+                <img src="" alt="" id="pics" height="300px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="myModalLabel" aria-aria-hidden="true"
+     style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" align="center">
+                <img class="img-circle" id="img_logo" src="images/joystick.png">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                 </button>
             </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="center">
-    <div class="inner-center">
-      <div id="TableDiv">
-        <div id="buttons">
-          <tr>
-              <table  border="0">
-                <td><div align="center"><input id="Button1" type="Button" value="Sp 1" border="1" disabled ></div></td>
-                <td><div align="center"><input id="Button2" type="Button" value="Sp 2" border="1" disabled ></div></td>
-                <td><div align="center"><input id="Button3" type="Button" value="Sp 3" border="1" disabled ></div></td>
-                <td><div align="center"><input id="Button4" type="Button" value="Sp 4" border="1" disabled ></div></td>
-                <td><div align="center"><input id="Button5" type="Button" value="Sp 5" border="1" disabled ></div></td>
-                <td><div align="center"><input id="Button6" type="Button" value="Sp 6" border="1" disabled ></div></td>
-                <td><div align="center"><input id="Button7" type="Button" value="Sp 7" border="1" disabled ></div></td>
-              </table>
-          </tr>
-        </div>
-      <div id="plop1"> <img id="player-table" src="leer.gif" border="1" alt="6,0" hidden=true> </div>
-      <div id="plop2"> <img id="player-table" src="leer.gif" border="1" alt="6,0" hidden=true> </div>
-      <div id="plop3"> <img id="player-table" src="leer.gif" border="1" alt="6,0" hidden=true> </div>
-      <div id="plop4"> <img id="player-table" src="leer.gif" border="1" alt="6,0" hidden=true> </div>
-      <div id="plop5"> <img id="player-table" src="leer.gif" border="1" alt="6,0" hidden=true> </div>
-      <div id="plop6"> <img id="player-table" src="leer.gif" border="1" alt="6,0" hidden=true> </div>
-      <div id="plop7"> <img id="player-table" src="leer.gif" border="1" alt="6,0" hidden=true> </div>
-      <div class="player">
-          <div align="center" id="playerdiv"><input id="player1" value="Spieler1" type="Button" disabled /></div>
-          <img id="player" src="rot.gif" border="1" alt="... ist player">
-          <div align="center" id="playerdiv"><input id="player2" value="Spieler2" type="Button" disabled /></div>
-      </div>
-      <div id="table">
 
-      </div>
-      <div  class="table">
-          <table border="0">
-            <tr>
-              <td><img id="player-table" src="leer.gif" border="1" alt="6,0">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="5,0">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="4,0">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="3,0">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="2,0">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="1,0">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="0,0">  </td>
-            </tr>
-            <tr>
-              <td><img id="player-table" src="leer.gif" border="1" alt="6,1">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="5,1">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="4,1">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="3,1">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="2,1">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="1,1">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="0,1">  </td>
-            </tr>
-            <tr>
-              <td><img id="player-table" src="leer.gif" border="1" alt="6,2">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="5,2">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="4,2">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="3,2">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="2,2">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="1,2">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="0,2">  </td>
-            </tr>
-            <tr>
-              <td><img id="player-table" src="leer.gif" border="1" alt="6,3">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="5,3">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="4,3">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="3,3">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="2,3">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="1,3">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="0,3">  </td>
-            </tr>
-            <tr>
-              <td><img id="player-table" src="leer.gif" border="1" alt="6,4">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="5,4">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="4,4">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="3,4">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="2,4">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="1,4">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="0,4">  </td>
-            </tr>
-            <tr>
-              <td><img id="player-table" src="leer.gif" border="1" alt="6,5">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="5,5">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="4,5">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="3,5">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="2,5">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="1,5">  </td>
-              <td><img id="player-table" src="leer.gif" border="1" alt="0,5">  </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <div id="chatDiv">
-          <div id="chat-window">
-            <div id="output"></div>
-            <div id="feedback">
-              <div id="victory" hidden="true"></div>
-              <br>
-              <div id="newDiv" hidden="true"><input id="new" type="button" value="Neustart" onClick="disabled=true"></div>
+            <!-- Begin # DIV Form -->
+            <div id="div-forms">
+
+                <!-- Begin # Login Form -->
+                <form id="login-form">
+                    <div class="modal-body">
+                        <div id="div-login-msg">
+                            <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                            <span id="text-login-msg">Type your username and password.</span>
+                        </div>
+                        <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                        <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div>
+                            <button type="submit" id="login_button" class="btn btn-primary btn-lg btn-block"
+                                    onclick="getUser()">Login
+                            </button>
+                        </div>
+                        <div>
+                            <!-- Nachdem dieser button gedrückt wird soll das komplette Modal ersetzt mit dem namen des eingloggten users localStorage.user und einen logout button ersetzt werden.
+                             Dem logout button die funktion logOut() per onclick="logOut()" hinzufügen und wieder das login modal anzeigen.-->
+                            <button type="button" class="btn btn-link" data-toggle="modal" data-dismiss="modal"
+                                    aria-label="Close" data-target="#register-modal">
+                                Sign up
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-          </div>
-          <input class="field" id="handle" type="text" placeholder="Name"/>
-          <input class="field" id="message" type="text" placeholder="Message"/>
-          <button id="send">Send</button>
-          <button id="start" onclick="disabled=true">Start</button>
-      </div>
-      <div class="plops" id="started" value="0" >0</div>
-      <script src="/chat.js"></script>
+        </div>
     </div>
-  </div>
+</div>
+<!-- End # Login Form -->
 
-  <footer><a href="impressum.html">Impressum</p></footer>
+<!-- Begin | Register Form -->
+<div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="myModalLabel" aria-aria-hidden="true"
+     style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" align="center">
+                <img class="img-circle" id="img_logo" src="images/joystick.png">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+            </div>
 
+
+            <form id="register-form" style="">
+                <div class="modal-body">
+                    <div id="div-register-msg">
+                        <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                        <span id="text-register-msg">Register an account.</span>
+                    </div>
+                    <input id="register_username" class="form-control" type="text" placeholder="Username" required>
+                    <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                    <br> <input type="checkbox" id="AGB" name="AGB" value="I have a bike" required>
+                    <label for="AGB">Accept terms and conditions</label>
+                    <br> <input type="checkbox" id="NotAMachine" name="NotAMachine" required>
+                    <label for="NotAMachine">I am not a machine</label>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                        <button id="register_button" type="submit" class="btn btn-primary btn-lg btn-block"
+                                onclick="createUser()">Register
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-dismiss="modal"
+                                aria-label="Close" data-target="#login-modal">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <!-- End | Register Form -->
+
+        </div>
+        <!-- End # DIV Form -->
+
+    </div>
+</div>
+<<<<<<< HEAD
+<footer><a href="impressum.html">Impressum</p></footer>
+=======
+
+<footer><a href="impressumlala.html">Impressum</p></footer>
+
+>>>>>>> eb6257f57a7e64b5dda8340ade87f94078797d98
+<!-- END # MODAL LOGIN -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script src="js/accounthandler.js"></script>
 </body>
 </html>

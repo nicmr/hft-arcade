@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/mountnaxe.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+    <a class="navbar-brand active" href="index.html">
+      <img src="Bilder/logoController.png" height="30" class="d-inline-block align-top" alt="home" >
+      The Arcade <span class="sr-only">(current)</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-item nav-link" id="active" href="game1.html">Mount'Axe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="game2.html">Roll a Ball</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="4Gewinnt/public/index.html">4-Gewinnt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="game4.html">Pong</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="TicTacToe/public/index.html">TicTacToe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="game6.html">KnightRun</a>
+        </li>
+      </ul>
+      <!-- Beginn Startseite -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <div id="storage" onload="loggedUser()"></div>
+          <div class="container">
+            <div class="row">
+              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login-modal" id="mod">
+                    Login
+                </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="center">
+    <div class="inner-center">
+      <div id="main">
+        <div id="leftUI">
+          <div id="gameStartUI">
+            <form action="index.html" method="post" class="column">
+              <!-- <div class="rowCustom">
+                <p>Size (>6):</p>
+                <p id="size">6</p>
+              </div>
+              <div class="rowCustom">
+                <p>Gold amount to start with:</p>
+                <p id="goldStart">400</p>
+              </div>
+              <div class="rowCustom">
+                <p>Name of Player1:</p>
+                <p id="size">Player1</p>
+              </div>
+              <div class="rowCustom">
+                <p>Name of Player2:</p>
+                <p id="size">Player1</p>
+              </div> -->
+              Size (>6):
+              <input id="size" type="text"  value="6">
+              Gold amount to start with:
+              <input id="goldStart" type="text" name="" value="400">
+              Name of Player1:
+              <input id="namePlayer1"type="text" name="" value=localstorage.name>
+              Name of Player2:
+              <input id="namePlayer2" name=""  value="Gast">
+            </form>
+            <!-- <button id="startButtoN" type="button" name="button" onclick="start()"> Starte neues Spiel</button> -->
+            <button id="startButton" type="button" name="button" onclick="start()">Start</button>
+          </div>
+          <div id="runningGameUI">
+            <div class="rowCustom">
+              <p>Active Player:</p>
+              <p id="activePlayer"></p>
+            </div>
+            <div class="rowCustom">
+              <p>Availabe gold:</p>
+              <p id="availableGold"></p>
+            </div>
+            <div class="rowCustom">
+              <p>Round:</p>
+              <p id="roundCounter"></p>
+            </div>
+            <div class="rowCustom">
+              <p>Field: </p>
+              <p id="fieldName"></p>
+            </div>
+            <button id="endButton" type="button" onclick="nextRound()">End round</button>
+          </div>
+        </div>
+
+        <div id="board">
+        </div>
+
+        <div id="rightUI">
+          <div id="unitInfoUI">
+            <img id="pictureRight" style="background:url(./images/empty.png)" src="" alt="leer">
+            <div class="rowCustom">
+              <p>Name: </p>
+              <p id="elementName" ></p>
+            </div>
+            <div class="rowCustom">
+              <p>Healthpoints: </p>
+              <p id="healthpoints"></p>
+            </div>
+            <div class="rowCustom">
+              <p>Damage: </p>
+              <p id="attackDamage"></p>
+            </div>
+            <div class="rowCustom">
+              <p>Remaining steps: </p>
+              <p id="steps"></p>
+            </div>
+          </div>
+          <div id="buttonDiv">
+            <button id="moveButton" class="disabledButton" style="display='none'" onclick="moveInterface()" type="button" name="button">move</button>
+            <button id="attackButton" class="disabledButton" style="display='none'" onclick="attackInterface()" type="button" name="button">attack</button>
+            <button id="chooseBuildingButton" class="disabledButton" onclick="chooseBuilding()" style="display='none'" type="button" name="button"><p>make building clickable</p></button>
+            <button id="buildAxe" class="disabledButton" style="display='none'" onclick="buildAxe()">build axewarrior</button>
+            <button id="buildSword" class="disabledButton" style="display='none'" onclick="buildSword()">build sword- warrior</button>
+            <button id="buildCavalry" class="disabledButton" style="display='none'" onclick="buildCavalry()">build cavalry</button>
+          </div>
+        </div>
+
+      </div>
+      <script src="js/mountnaxe.js"></script>
+    </div>
+  </div>
+  <footer><a href="impressum.html">Impressum</p></footer>
+
+</body>
+</html>
