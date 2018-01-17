@@ -28,10 +28,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(./Bilder/mario.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position:top;
+  background-image: url(./Bilder/mario4.jpg);
+  background-position:center;
 
 }
 
@@ -285,14 +283,15 @@ td{
 
 #TableDiv {
   background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
 }
 
 #TableDiv, #chatDiv{
   max-width: 367px;
   height: 458px;
   margin: 15px 5px 30px 5px;
-  border: 1px solid #ddd;
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+
   border-radius: 2px;
   position: relative;
   display: flex;
@@ -311,7 +310,6 @@ td{
   height: 53%;
   width: 100%;
   overflow: auto;
-  background: #f9f9f9;
 }
 
 #output p{

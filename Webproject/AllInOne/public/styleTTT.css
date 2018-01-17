@@ -28,6 +28,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(./Bilder/mario4.jpg);
+  background-position:center;
 }
 
 footer a {
@@ -280,14 +282,15 @@ td{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: transparent;
 }
 
 #TableDiv, #chatDiv{
   max-width: 367px;
   height: 458px;
   margin: 15px 5px 30px 5px;
-  border: 1px solid #ddd;
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+
+
   border-radius: 2px;
   position: relative;
   font-family: 'Nunito';
@@ -302,7 +305,8 @@ td{
   height: 53%;
   width: 100%;
   overflow: auto;
-  background: #f9f9f9;
+  background: transparent;
+
 }
 
 #output p{
