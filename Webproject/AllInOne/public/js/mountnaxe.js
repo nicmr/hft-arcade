@@ -21,6 +21,10 @@ var availableFields;
 var mountAndAxeSocket;
 var game = "maa";
 
+$(document).ready(function(){
+  $("#namePlayer1").text(localStorage.user);
+});
+
 // function wsconnect(){
 //   console.log("MountAndAxe attempts to connect...");
 //   exampleSocket = new WebSocket("ws://localhost:8765/local/ws/");
@@ -369,6 +373,9 @@ function checkCastle(childNodes){
     alert(winMessage);
     MountAndAxeSocket = new WebSocket("ws://localhost:8765/local/ws/");
     MountAndAxeSocket.onopen = function (){
+      var update = JSON.stringify({"name" : localStorage.user}, {"$inc": {"maarounds": 1, "maawins": won} });
+      console.log(update);
+      MountAndAxeSocket.send(update);
     }
     start();
 }
