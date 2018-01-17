@@ -1,6 +1,6 @@
 // Make Connection
-var socket = io.connect('http://192.168.0.31:3000');
-// var socket = io.connect('http://localhost:3000');
+// var socket = io.connect('http://192.168.0.31:3000');
+var socket = io.connect('http://localhost:3000');
 // var socket = io.connect('http://172.20.10.11:3000');
 // var socket = io.connect('http://192.168.178.39:3000');
 
@@ -31,7 +31,11 @@ var message = document.getElementById('message');
     plop5var = document.getElementById('plop5var'),
     plop6var = document.getElementById('plop6var'),
     plop7var = document.getElementById('plop7var'),
-    started = document.getElementById('started');
+    started = document.getElementById('started'),
+    table = document.getElementById('table'),
+    newButton = document.getElementById('new'),
+    newDiv = document.getElementById('newDiv'),
+    victory = document.getElementById('victory');
 
 // Creating a matrix for the playground area with the value 0.
 var spielfeld=new Array(7);
@@ -46,6 +50,21 @@ var spielfeld=new Array(7);
 // Round counter
 var player = 1;
 
+// Counter for falling buttons
+var plopvar1 = 6;
+var plopvar2 = 6;
+var plopvar3 = 6;
+var plopvar4 = 6;
+var plopvar5 = 6;
+var plopvar6 = 6;
+var plopvar7 = 6;
+
+//Counter for ids
+var started = 0;
+
+//Counter for neustart-clicks
+var neustart = 0;
+
 // Emit events
 
 // Emit the id of the player who clicked the start button to the server
@@ -57,7 +76,7 @@ socket.emit('Player', {
 
 // Gets the information from the server from the clicked start button
 socket.on('Player', function(data) {
-    started.value = data.id;
+    started = data.id;
     window.document.images[7].hidden = false;
     window.document.images[1].hidden = false;
     window.document.images[2].hidden = false;
@@ -66,7 +85,22 @@ socket.on('Player', function(data) {
     window.document.images[5].hidden = false;
     window.document.images[6].hidden = false;
     startClicks ++;
+    if(startClicks == 2){
+      start.disabled = true;
+    }
     able();
+})
+
+newButton.addEventListener('click', function(){
+  socket.emit('newGame', {
+  })
+})
+
+socket.on('newGame', function(data) {
+    neustart++;
+    if(neustart == 2){
+      location.reload();
+    }
 })
 
 // Emit the information of our chat values to the server after clicking the send button
@@ -149,8 +183,33 @@ socket.on('Button', function(data) {
     // Fires the move-function with the right column
     move(data.Button);
 
+    // Counting the setted locations in a invisible html area
+    switch(data.Button){
+      case 0:
+      plopvar1--;
+      break;
+      case 1:
+      plopvar2--;
+      break;
+      case 2:
+      plopvar3--;
+      break;
+      case 3:
+      plopvar4--;
+      break;
+      case 4:
+      plopvar5--;
+      break;
+      case 5:
+      plopvar6--;
+      break;
+      case 6:
+      plopvar7--;
+      break;
+    }
+
     // Sets the value of an invisible html box to the players id
-    started.value = data.id;
+    started = data.id;
 })
 
 
@@ -182,7 +241,7 @@ able = function () {
 
     // If the setted started id isn't equal to the players id
     // AND the start button got hit more then 1 time the game buttons get activated
-    if(started.value != socket.id && startClicks >= 2){
+    if(started != socket.id && startClicks >= 2){
         document.getElementById('Button1').disabled = false;
         document.getElementById('Button2').disabled = false;
         document.getElementById('Button3').disabled = false;
@@ -190,6 +249,14 @@ able = function () {
         document.getElementById('Button5').disabled = false;
         document.getElementById('Button6').disabled = false;
         document.getElementById('Button7').disabled = false;
+        if (player == 1) {
+          table.style.color = "red";
+        } else {
+          table.style.color = "blue";
+        }
+        table.innerHTML = '<p><em>Du bist dran</em></p>';
+    } else {
+      table.innerHTML = '';
     }
     // If a playground location in the toppes row is already set the game button for this column gets disabled
     for (var i = 0; i < 7; i++) {
@@ -199,6 +266,7 @@ able = function () {
         document.getElementById(buttonDis).disabled = true;
       };
     }
+
 }
 
 // This function gets fired if someone clicked a Game Button
@@ -248,30 +316,6 @@ drop = function (Spalte){
         }
     }
 
-    // Counting the setted locations in a invisible html area
-    switch(Spalte){
-      case 0:
-      plop1var.innerHTML -= 1;
-      break;
-      case 1:
-      plop2var.innerHTML -= 1;
-      break;
-      case 2:
-      plop3var.innerHTML -= 1;
-      break;
-      case 3:
-      plop4var.innerHTML -= 1;
-      break;
-      case 4:
-      plop5var.innerHTML -= 1;
-      break;
-      case 5:
-      plop6var.innerHTML -= 1;
-      break;
-      case 6:
-      plop7var.innerHTML -= 1;
-      break;
-    }
     // activate the Game Buttons for the next player
     able();
 }
@@ -405,32 +449,30 @@ check = function (Spalte,Zeile,Farbe)
              z2=0;
         }
     }
-    console.log('Ost: ' + laengeNordOst);
-    console.log('West: ' + laengeNordWest);
-    console.log('Start unten: ' + startNordWestUnten);
-    console.log('Start oben: ' + startNordWestOben);
-
-
-
-
-
 }
 
 // This function gets fired if someone won;
 
 won = function()
 {
+// Frontend
+  victory.hidden = false;
+  newDiv.hidden = false;
+  newButton.hidden = false;
+
   // Who won?
     if ( player == 1 ){
       // Set the right color and text
-        feedback.innerHTML = '<div><p><em>Rot hat gewonnen.</em></p></div><br><div id="newDiv"><input id="new" type="button" value="Neustart" onClick="location.reload();"></div>';
+        // feedback.innerHTML = '<div><p><em>Rot hat gewonnen.</em></p></div><br><div id="newDiv"><input id="new" type="button" value="Neustart"></div>';
+        victory.innerHTML = "<p><em>Rot hat gewonnen.</em></p>";
         player1.style.background = "red";
         player2.style.background = "white";
         player1.style.borderColor = "black";
         player2.style.borderColor = "white";
         window.document.images[8].src= rot.src;
     }else{
-        feedback.innerHTML = '<div><p><em>Blau hat gewonnen.</em></p></div><br><div id="newDiv"><input id="new" type="button" value="Neustart" onClick="location.reload();"></div>';
+        // feedback.innerHTML = '<div><p><em>Blau hat gewonnen.</em></p></div><br><div id="newDiv"><input id="new" type="button" value="Neustart" onClick="location.reload();"></div>';
+        victory.innerHTML = "<p><em>Blau hat gewonnen.</em></p>";
         player1.style.background = "white";
         player2.style.background = "blue";
         player1.style.borderColor = "white";
@@ -449,6 +491,9 @@ won = function()
     message.disabled = true;
     // Reset the startClicks
     startClicks = 0;
+
+    //Disable the start buttons
+    start.disabled = true;
 }
 
 // This function moves the stones
@@ -467,38 +512,37 @@ move = function(Spalte){
   var buttonDis = 'plop' + spal;
   var elem = document.getElementById(buttonDis);
   // Make the stone visible
-  elem.style.marginLeft = 4 + (spal-1) * 51 + "px";
+  elem.style.marginLeft = -153 + (spal-1) * 51 + "px";
   // Move the right stone and the move it not too far
-  var pos = 21;
+  var pos = 23;
   var diff = 51;
   switch (spal) {
     case 1:
-        var to = pos + plop1var.innerHTML * diff;
+        var to = pos + plopvar1 * diff;
         break;
     case 2:
-        var to = pos + plop2var.innerHTML * diff;
+        var to = pos + plopvar2 * diff;
         break;
     case 3:
-        var to = pos + plop3var.innerHTML * diff;
+        var to = pos + plopvar3 * diff;
         break;
     case 4:
-        var to = pos + plop4var.innerHTML * diff;
+        var to = pos + plopvar4 * diff;
         break;
     case 5:
-        var to = pos + plop5var.innerHTML * diff;
+        var to = pos + plopvar5 * diff;
         break;
     case 6:
-        var to = pos + plop6var.innerHTML * diff;
+        var to = pos + plopvar6 * diff;
         break;
     case 7:
-        var to = pos + plop7var.innerHTML * diff;
+        var to = pos + plopvar7 * diff;
         break;
   }
   var id = setInterval(frame, 1);
   // Lets do the moves
   function frame() {
     if( pos > to ){
-      console.log(to);
       clearInterval(id);
       drop(Spalte);
       elem.style.top = to + 'px';
