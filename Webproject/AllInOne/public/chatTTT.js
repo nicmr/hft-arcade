@@ -25,7 +25,7 @@ var message = document.getElementById('message');
     output = document.getElementById('output'),
     feedback = document.getElementById('feedback'),
     round = document.getElementById('Round'),
-    
+
     field = document.getElementById('field'),
     player1 = document.getElementById('player1'),
     player2 = document.getElementById('player2'),
@@ -37,7 +37,11 @@ var message = document.getElementById('message');
     plop5var = document.getElementById('plop5var'),
     plop6var = document.getElementById('plop6var'),
     plop7var = document.getElementById('plop7var'),
-    started = document.getElementById('started');
+    started = document.getElementById('started'),
+    table = document.getElementById('table'),
+    newButton = document.getElementById('new'),
+    newDiv = document.getElementById('newDiv'),
+    victory = document.getElementById('victory');
 
 // Creating a matrix for the playground area with the value 0.
 var spielfeld=new Array(3);
@@ -52,6 +56,13 @@ var spielfeld=new Array(3);
 // Round counter
 var player = 1;
 
+//Counter for ids
+var started = 0;
+
+//Counter for neustart-clicks
+var neustart = 0;
+
+
 // Emit events
 
 // Emit the id of the player who clicked the start button to the server
@@ -63,9 +74,24 @@ socket.emit('Player', {
 
 // Gets the information from the server from the clicked start button
 socket.on('Player', function(data) {
-    started.value = data.id;
+    started = data.id;
     startClicks ++;
+    if(startClicks == 2){
+      start.disabled = true;
+    }
     able();
+})
+
+newButton.addEventListener('click', function(){
+  socket.emit('newGame', {
+  })
+})
+
+socket.on('newGame', function(data) {
+    neustart++;
+    if(neustart == 2){
+      location.reload();
+    }
 })
 
 // Emit the information of our chat values to the server after clicking the send button
@@ -184,11 +210,10 @@ socket.on('Button', function(data) {
     set();
 
 
-
     // Fires the move-function with the right column
 
     // Sets the value of an invisible html box to the players id
-    started.value = data.id;
+    started = data.id;
     able();
 })
 
@@ -231,7 +256,7 @@ able = function () {
     }
 
 
-    if(started.value != socket.id && startClicks >= 2){
+    if(started != socket.id && startClicks >= 2){
       for (var i = 0; i < list.length; i++) {
         document.getElementById(list[i]).disabled = false;
       }
@@ -338,13 +363,16 @@ check = function ()
 
 won = function()
 {
+  victory.hidden = false;
+  newDiv.hidden = false;
+  newButton.hidden = false;
   // Who won?
     if ( player == 1 ){
       // Set the right color and text
-        feedback.innerHTML = '<div><p><em>Rot hat gewonnen.</em></p></div><br><div id="newDiv"><input id="new" type="button" value="Neustart" onClick="location.reload();"></div>';
+      victory.innerHTML = "<p><em>Rot hat gewonnen.</em></p>";
 
     }else{
-        feedback.innerHTML = '<div><p><em>Blau hat gewonnen.</em></p></div><br><div id="newDiv"><input id="new" type="button" value="Neustart" onClick="location.reload();"></div>';
+      victory.innerHTML = "<p><em>Blau hat gewonnen.</em></p>";
 
     }
     // Disable the Game Buttons
@@ -363,6 +391,8 @@ won = function()
     message.disabled = true;
     // Reset the startClicks
     startClicks = 0;
+    //Disable the start buttons
+    start.disabled = true;
 }
 
 

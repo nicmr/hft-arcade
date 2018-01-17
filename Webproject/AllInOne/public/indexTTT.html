@@ -88,31 +88,26 @@
         </table>
 
     </div>
-      <div id="chatDiv">
-          <div id="chat-window">
-            <div id="output"></div>
-            <div id="feedback"></div>
+    <div id="chatDiv">
+        <div id="chat-window">
+          <div id="output"></div>
+          <div id="feedback">
+            <div id="victory" hidden="true"></div>
+            <br>
+            <div id="newDiv" hidden="true"><input id="new" type="button" value="Neustart" onClick="disabled=true"></div>
           </div>
-          <input class="field" id="handle" type="text" placeholder="Name"/>
-          <input class="field" id="message" type="text" placeholder="Message"/>
-          <button id="send">Send</button>
-          <div>
-            <button id="start">Start</button>
-          </div>
-      </div>
-      <div class="plops" id="plop1var" >6</div>
-      <div class="plops" id="plop2var" >6</div>
-      <div class="plops" id="plop3var" >6</div>
-      <div class="plops" id="plop4var" >6</div>
-      <div class="plops" id="plop5var" >6</div>
-      <div class="plops" id="plop6var" >6</div>
-      <div class="plops" id="plop7var" >6</div>
-      <div class="plops" id="started" value="0" >0</div>
-      <script src="/chatTTT.js"></script>
+        </div>
+        <input class="field" id="handle" type="text" placeholder="Name"/>
+        <input class="field" id="message" type="text" placeholder="Message"/>
+        <button id="send">Send</button>
+        <button id="start" onclick="disabled=true">Start</button>
     </div>
+    <div class="plops" id="started" value="0" >0</div>
+    <script src="/chatTTT.js"></script>
   </div>
+</div>
 
-  <footer><a href="impressum.html">Impressum</p></footer>
+<footer><a href="impressum.html">Impressum</p></footer>
 
 </body>
 </html>
