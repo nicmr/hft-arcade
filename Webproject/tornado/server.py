@@ -53,7 +53,7 @@ class LocalGameHandler(tornado.websocket.WebSocketHandler):
             client = MongoClient()
             db = client['arcade']
             collection = db['user']
-            update_scores = collection.update(jsondict['name'], jsondict)
+            update_scores = collection.update(jsondict)
             update_scores
             print('success')
 
