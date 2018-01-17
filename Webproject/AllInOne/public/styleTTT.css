@@ -1,0 +1,326 @@
+@font-face {
+  font-family: 'meine-schrift';
+  src: local('8BIT WONDER Nominal Standard'), url('./font/8-BITWONDER.TTF') format('truetype');
+}
+
+body {
+  color: black;
+  font-family: 'meine-schrift';
+}
+
+.tttField{
+  margin: 70px;
+  border: 1px solid #e9e9e9;
+  border-radius: 0 0 2px 2px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.center {
+  display: flex;
+  background-image: url(Bilder/Arcade-Background8.jpg);
+  background-size: 100% auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 81vh;
+}
+
+.inner-center {
+  width: 80%;
+  height: 98%;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  height: 60px;
+  width: 100%;
+  background-color: orange;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.navbar {
+  background-color: orange;
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+
+footer a:hover {
+  color: red;
+}
+
+#impressum {
+  font-family: 'Roboto';
+
+}
+body{
+    font-family: 'Nunito';
+}
+
+div{
+  flex: 0 auto;
+}
+
+button{
+    background: darkcyan;
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid #e9e9e9;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+
+button:hover{
+  color: black;
+  font-size: 20px;
+}
+
+input{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #eee;
+    border: 0;
+    display: block;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border: 1px solid #eee;
+    font-family: Nunito;
+    font-size: 16px;
+}
+
+tr{
+  width: 366px;
+  height: 50px;
+}
+
+td{
+  width: 50px;
+  height: 50px;
+}
+
+.table td, .table th {
+  padding: 0;
+  vertical-align: top;
+  border: 1px solid #dee2e6;
+}
+
+.plops{
+  display: none;
+}
+
+.field{
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background: #eee;
+  border: 0;
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #eee;
+  font-family: Nunito;
+  font-size: 16px;
+}
+
+.player{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+}
+
+.table {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#handle, #message {
+  height: 50px;
+}
+
+#Button1, #Button2, #Button3, #Button4, #Button5, #Button6, #Button7{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#buttons{
+  width: 100%;
+  height: 50px;
+}
+
+#new{
+  background: darkcyan;
+  color: white;
+  width: 150px;
+  height: 40px;
+}
+
+#new:hover{
+  color: black;
+}
+
+#newDiv{
+  display: flex;
+  justify-content: center;
+}
+
+#start{
+  height: 60px;
+}
+
+#send{
+  height: 55px;
+}
+
+#plop1, #plop2, #plop3, #plop4, #plop5, #plop6, #plop7 {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  margin-top: 73px;
+}
+
+
+#player{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+}
+
+#player-table{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#player1, #player2{
+  color: white;
+  width: 120px;
+  height: 39px;
+  font-size: 13px;
+  border-radius: 0 0 2px 2px;
+  border: 1px solid #ddd;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+}
+
+#player1{
+  background: red;
+}
+
+#player2{
+  background: blue;
+}
+
+#playerdiv{
+  display: flex;
+  justify-content: center;
+}
+
+#TableDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#TableDiv, #chatDiv{
+  max-width: 367px;
+  height: 458px;
+  margin: 15px 5px 30px 5px;
+  border: 1px solid #ddd;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+  border-radius: 2px;
+  position: relative;
+}
+
+#mario-chat{
+  display: flex;
+  justify-content: center;
+}
+
+#chat-window{
+  height: 53%;
+  width: 100%;
+  overflow: auto;
+  background: #f9f9f9;
+}
+
+#output p{
+    padding: 14px 0px;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555;
+}
+
+#feedback p{
+    display: flex;
+    color: #aaa;
+    padding: 14px 0px;
+    margin: 0 20px;
+}
+
+#Round{
+  display: flex;
+  padding: 14px 0px;
+  margin: 0 20px;
+  height: 50px;
+}
+
+#output strong{
+    color: #575ed8;
+}
+
+/*#Button11, #Button21, #Button31,
+#Button12, #Button22, #Button32,
+#Button13, #Button23, #Button33{
+  background: white;
+}*/
