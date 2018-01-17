@@ -10,6 +10,7 @@ body {
 
 
 
+
 .center {
   display: flex;
   background-image: url(Bilder/Arcade-Background8.jpg);
@@ -84,7 +85,7 @@ nav #activebrand {
   opacity: 1;
 }
 
-img {
+div img {
   border: 1px solid #dee2e6;
 }
 
