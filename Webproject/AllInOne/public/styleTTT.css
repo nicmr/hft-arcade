@@ -1,6 +1,11 @@
 @font-face {
   font-family: 'meine-schrift';
-  src: local('8BIT WONDER Nominal Standard'), url('./font/8-BITWONDER.TTF') format('truetype');
+  src: url('./font/8-BITWONDER.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'meine-schrift2';
+  src: url('./font/Neon.TTF') format('truetype');
 }
 
 body {
@@ -8,35 +13,28 @@ body {
   font-family: 'meine-schrift';
 }
 
-.tttField{
-  margin: 70px;
-  border: 1px solid #e9e9e9;
-  border-radius: 0 0 2px 2px;
-  border-width: 1px;
-  border-style: solid;
-}
-
 .center {
   display: flex;
   background-image: url(Bilder/Arcade-Background8.jpg);
-  background-size: 100% auto;
+  background-size: 110% auto;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 81vh;
+  height: 90vh;
 }
 
 .inner-center {
-  width: 80%;
-  height: 98%;
+  display: flex;
+  width: 70%;
+  height: 80%;
   border-radius: 20px;
   background-color: white;
-  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-footer {
-  height: 60px;
+footer a {
+  height: 30px;
   width: 100%;
   background-color: orange;
   border-top: 2px solid black;
@@ -45,33 +43,40 @@ footer {
   bottom: 0px;
   left: 0px;
   font-size: 12px;
-  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.navbar {
+#nav {
   background-color: orange;
   color: black;
 }
 
-a {
+#nav a {
   color: black;
 }
 
-nav a:hover {
+#nav a:hover {
   color: blue;
 }
 
-
 footer a:hover {
-  color: red;
+  color: blue;
 }
 
 #impressum {
   font-family: 'Roboto';
-
 }
-body{
-    font-family: 'Nunito';
+
+.tttField{
+  margin: 70px;
+  border: 1px solid #e9e9e9;
+  border-radius: 0 0 2px 2px;
+  border-width: 1px;
+  border-style: solid;
 }
 
 div{
