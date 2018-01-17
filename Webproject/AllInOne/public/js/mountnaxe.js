@@ -371,7 +371,6 @@ function checkCastle(childNodes){
     MountAndAxeSocket.onopen = function (){
     }
     start();
-  }
 }
 
 function checkAlive(childNodes){
