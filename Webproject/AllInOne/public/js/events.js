@@ -14,6 +14,7 @@ function mouseOver(ele) {
 function mouseOverHighscore() {
   document.getElementById("highscore").style.backgroundColor = "orange";
   id = "highscore";
+  document.getElementById("pics").setAttribute("src", "Bilder/gold.png");
   border();
 }
 
