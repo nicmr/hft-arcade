@@ -77,6 +77,101 @@
         </div>
     </div>
   </div>
+  <!-- BEGIN # MODAL LOGIN -->
+  <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="myModalLabel" aria-aria-hidden="true"
+       style="display: none;">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header" align="center">
+                  <img class="img-circle" id="img_logo" src="images/joystick.png">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                  </button>
+              </div>
+
+              <!-- Begin # DIV Form -->
+              <div id="div-forms">
+
+                  <!-- Begin # Login Form -->
+                  <form id="login-form">
+                      <div class="modal-body">
+                          <div id="div-login-msg">
+                              <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                              <span id="text-login-msg">Type your username and password.</span>
+                          </div>
+                          <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                          <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+
+                      </div>
+                      <div class="modal-footer">
+                          <div>
+                              <button type="submit" id="login_button" class="btn btn-primary btn-lg btn-block"
+                                      onclick="getUser()">Login
+                              </button>
+                          </div>
+                          <div>
+                              <!-- Nachdem dieser button gedrückt wird soll das komplette Modal ersetzt mit dem namen des eingloggten users localStorage.user und einen logout button ersetzt werden.
+                               Dem logout button die funktion logOut() per onclick="logOut()" hinzufügen und wieder das login modal anzeigen.-->
+                              <button type="button" class="btn btn-link" data-toggle="modal" data-dismiss="modal"
+                                      aria-label="Close" data-target="#register-modal">
+                                  Sign up
+                              </button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End # Login Form -->
+
+  <!-- Begin | Register Form -->
+  <div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="myModalLabel" aria-aria-hidden="true"
+       style="display: none;">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header" align="center">
+                  <img class="img-circle" id="img_logo" src="images/joystick.png">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                  </button>
+              </div>
+
+
+              <form id="register-form" style="">
+                  <div class="modal-body">
+                      <div id="div-register-msg">
+                          <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                          <span id="text-register-msg">Register an account.</span>
+                      </div>
+                      <input id="register_username" class="form-control" type="text" placeholder="Username" required>
+                      <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                      <br> <input type="checkbox" id="AGB" name="AGB" value="I have a bike" required>
+                      <label for="AGB">Accept terms and conditions</label>
+                      <br> <input type="checkbox" id="NotAMachine" name="NotAMachine" required>
+                      <label for="NotAMachine">I am not a machine</label>
+                  </div>
+                  <div class="modal-footer">
+                      <div>
+                          <button id="register_button" type="submit" class="btn btn-primary btn-lg btn-block"
+                                  onclick="createUser()">Register
+                          </button>
+                      </div>
+                      <div>
+                          <button type="button" class="btn btn-link" data-toggle="modal" data-dismiss="modal"
+                                  aria-label="Close" data-target="#login-modal">
+                              Login
+                          </button>
+                      </div>
+                  </div>
+              </form>
+              <!-- End | Register Form -->
+
+          </div>
+          <!-- End # DIV Form -->
+
+      </div>
+  </div>
   <footer><a href="impressum.html">Impressum</p></footer>
   <script src="js/accounthandler.js"></script>
 </body>
