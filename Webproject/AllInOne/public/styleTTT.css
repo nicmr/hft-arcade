@@ -32,6 +32,11 @@ body {
   background-position:center;
 }
 
+#handle, #message, #send, #start {
+  border-radius: 5px;
+}
+
+
 footer a {
   height: 30px;
   width: 100%;
