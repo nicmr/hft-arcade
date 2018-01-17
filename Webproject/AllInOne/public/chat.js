@@ -1,6 +1,6 @@
 // Make Connection
-var socket = io.connect('http://192.168.0.31:3000');
-// var socket = io.connect('http://localhost:3000');
+//var socket = io.connect('http://192.168.0.31:3000');
+ var socket = io.connect('http://localhost:3000');
 // var socket = io.connect('http://172.20.10.11:3000');
 // var socket = io.connect('http://192.168.178.39:3000');
 

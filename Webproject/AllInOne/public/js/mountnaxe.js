@@ -360,7 +360,6 @@ function checkCastle(childNodes){
     // for (var temp in allUnits){
     //   clearField(temp.childNodes);
     // }
-    if (activePlayer.name  = localStorage.user){
       won = 1;
     }
     else {
@@ -370,7 +369,6 @@ function checkCastle(childNodes){
     alert(winMessage);
     MountAndAxeSocket = new WebSocket("ws://localhost:8765/local/ws/");
     MountAndAxeSocket.onopen = function (){
-      MountAndAxeSocket.send(JSON.stringify({"name" : localStorage.user}, {"$inc" : {"maarounds" : 1,  "maawins" : won }}));
     }
     start();
   }
