@@ -14,11 +14,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="56" column="51" lean-forward="false" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+            <state relative-caret-position="524">
+              <caret line="93" column="36" lean-forward="false" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
               <folding>
-                <marker date="1516200158083" expanded="false" signature="5936:5950" ph="..." />
-                <marker date="1516200158083" expanded="false" signature="8403:8417" ph="..." />
+                <marker date="1516200790067" expanded="false" signature="5908:5922" ph="..." />
+                <marker date="1516200790067" expanded="false" signature="8375:8389" ph="..." />
               </folding>
             </state>
           </provider>
@@ -103,9 +103,9 @@
       <list>
         <option value="$PROJECT_DIR$/js/accounthandler.js" />
         <option value="$PROJECT_DIR$/chat.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/index4g.html" />
         <option value="$PROJECT_DIR$/indexTTT.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -183,12 +183,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516198321429</updated>
-      <workItem from="1516198322807" duration="1359000" />
+      <workItem from="1516198322807" duration="1499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1359000" />
+    <option name="totallyTimeSpent" value="1499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="952" extended-state="6" />
@@ -284,11 +284,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="56" column="51" lean-forward="false" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+        <state relative-caret-position="524">
+          <caret line="93" column="36" lean-forward="false" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
           <folding>
-            <marker date="1516200158083" expanded="false" signature="5936:5950" ph="..." />
-            <marker date="1516200158083" expanded="false" signature="8403:8417" ph="..." />
+            <marker date="1516200790067" expanded="false" signature="5908:5922" ph="..." />
+            <marker date="1516200790067" expanded="false" signature="8375:8389" ph="..." />
           </folding>
         </state>
       </provider>
