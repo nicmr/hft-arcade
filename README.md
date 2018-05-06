@@ -1,6 +1,6 @@
 # hft-arcade
 
- A game platform developed for our web dev class 
+ A game platform developed for our web dev class.
  
 #### [nicmr](https://github.com/nicmr)
   * wrote the python tornado backend code
