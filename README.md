@@ -1,17 +1,17 @@
 # hft-arcade
 
-####[nicmr](https://github.com/nicmr)
+#### [nicmr](https://github.com/nicmr)
   * wrote the python tornado backend code
   * created one of the unity-webgl games
   
-####[Qunnlin](https://github.com/Qunnlin)
+#### [Qunnlin](https://github.com/Qunnlin)
   * added mongoDB integration to the tornado backend
   * created one of the unity-webgl games
   
-####[DaniHi](https://github.com/DaniHi)
+#### [DaniHi](https://github.com/DaniHi)
   * most of the frontend design
 
-####[Nesuma](https://github.com/Nesuma)
+#### [Nesuma](https://github.com/Nesuma)
   * client-side js
   * wrote a civ-like game in javascript
   
